@@ -21,7 +21,7 @@ export default function BottomNav({ navigate }) {
         <Ionicons name="search-outline" size={28} />
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => navigate('profile')}>
+      <TouchableOpacity onPress={() => navigate('configuration')}>
         <Ionicons name="person-outline" size={28} />
       </TouchableOpacity>
 
