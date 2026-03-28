@@ -4,10 +4,10 @@
     "slug": "EasyDrive",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "https://absqirfnfpkrvgioorlc.supabase.co/storage/v1/object/public/images/easy-drive-logo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "https://absqirfnfpkrvgioorlc.supabase.co/storage/v1/object/public/images/easy-drive-logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,13 +17,13 @@
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "foregroundImage": "https://absqirfnfpkrvgioorlc.supabase.co/storage/v1/object/public/images/easy-drive-logo.png",
+        "backgroundImage": "https://absqirfnfpkrvgioorlc.supabase.co/storage/v1/object/public/images/easy-drive-logo.png",
+        "monochromeImage": "https://absqirfnfpkrvgioorlc.supabase.co/storage/v1/object/public/images/easy-drive-logo.png"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "https://absqirfnfpkrvgioorlc.supabase.co/storage/v1/object/public/images/easy-drive-logo.png"
     }
   }
 }
