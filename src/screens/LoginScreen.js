@@ -23,8 +23,9 @@ export default function LoginScreen({ goToRegister, goToHome }) {
     <View style={styles.container}>
       
       <Image
-        source={{ uri: 'https://absqirfnfpkrvgioorlc.supabase.co/storage/v1/object/public/images/easy-drive-logo.png' }}
+        source={require('../../assets/easy-drive-logo.png')}
         style={styles.logo}
+        resizeMode="contain"
       />
 
       <Text style={styles.title}>Bienvenido(a) a EasyDrive</Text>
