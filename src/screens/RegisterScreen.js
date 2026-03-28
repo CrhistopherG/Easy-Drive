@@ -23,8 +23,9 @@ export default function RegisterScreen({ goToLogin }) {
     <View style={styles.container}>
 
         <Image
-                source={{ uri: 'https://absqirfnfpkrvgioorlc.supabase.co/storage/v1/object/public/images/easy-drive-logo.png' }}
+                source={require('../../assets/easy-drive-logo.png')}
                 style={styles.logo}
+                resizeMode="contain"
               />
         <Text style={styles.title}>REGISTRO DE USUARIO</Text>
         <Text style={styles.subtitle}>Crea tu cuenta en EasyDrive</Text>
