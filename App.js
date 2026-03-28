@@ -24,6 +24,6 @@ export default function App() {
   }
 
   if (screen === 'home') {
-    return <HomeScreen user={user} />;
+    return <HomeScreen user={user} navigate={setScreen} />;
   }
 }
