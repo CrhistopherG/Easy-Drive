@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Switch } from 'react-native';
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
+import BottomNav from '../components/BottomNav';
 
-export default function PerfilScreen() {
+export default function ConfigurationScreen({navigate}) {
   const [alertsEnabled, setAlertsEnabled] = useState(true);
 
   return (
     <View style={styles.container}>
-      
-      {/* Header */}
+
+      {/* HEADER */}
       <View style={styles.header}>
         <Text style={styles.title}>Perfil / Configuración</Text>
         <TouchableOpacity>
@@ -16,7 +17,7 @@ export default function PerfilScreen() {
         </TouchableOpacity>
       </View>
 
-      {/* Usuario */}
+      {/* USUARIO */}
       <View style={styles.section}>
         <View style={styles.card}>
           <Ionicons name="person" size={24} />
@@ -26,7 +27,7 @@ export default function PerfilScreen() {
         <Text style={styles.arrow}>↓</Text>
 
         <View style={styles.infoBox}>
-          <Text style={styles.infoText}>Jesus Alberto Jimenez</Text>
+          <Text style={styles.infoText}>Crhistopher Isai Ramirez Gutierrez</Text>
         </View>
 
         <View style={styles.infoBox}>
@@ -38,7 +39,7 @@ export default function PerfilScreen() {
         </View>
       </View>
 
-      {/* Configuración */}
+      {/* CONFIGURACIÓN */}
       <View style={styles.section}>
         <View style={styles.card}>
           <MaterialIcons name="settings" size={24} />
@@ -64,15 +65,89 @@ export default function PerfilScreen() {
         </View>
       </View>
 
-      {/* Footer */}
+      {/* FOOTER */}
       <View style={styles.footer}>
-        <Ionicons name="person-outline" size={24} />
-        <Ionicons name="cloud-outline" size={24} />
-        <Ionicons name="home" size={24} />
-        <Ionicons name="search" size={24} />
-        <Ionicons name="person-circle-outline" size={24} />
+        <BottomNav navigate={navigate} />
       </View>
 
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f2f2f2',
+    padding: 20,
+    justifyContent: 'space-between'
+  },
+
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  },
+
+  title: {
+    fontSize: 18,
+    fontWeight: 'bold'
+  },
+
+  section: {
+    alignItems: 'center',
+    marginTop: 20
+  },
+
+  card: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#6f9c95',
+    padding: 12,
+    borderRadius: 20,
+    width: '80%',
+    justifyContent: 'center',
+    gap: 10
+  },
+
+  cardText: {
+    fontSize: 16,
+    fontWeight: 'bold'
+  },
+
+  arrow: {
+    fontSize: 24,
+    marginVertical: 10
+  },
+
+  infoBox: {
+    backgroundColor: '#6f9c95',
+    padding: 10,
+    borderRadius: 10,
+    width: '80%',
+    marginVertical: 5,
+    alignItems: 'center'
+  },
+
+  rowBox: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: '#6f9c95',
+    padding: 10,
+    borderRadius: 10,
+    width: '80%',
+    marginVertical: 5
+  },
+
+  infoText: {
+    fontSize: 14
+  },
+
+  footer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    padding: 10,
+    borderTopWidth: 1,
+    borderColor: '#ccc',
+  }
+});

@@ -1,8 +1,9 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
+import BottomNav from '../components/BottomNav';
 
-export default function VehicleScreen() {
+export default function HomeScreen({navigate}) {
   return (
     <View style={styles.container}>
       
@@ -29,11 +30,7 @@ export default function VehicleScreen() {
 
       {/* Footer navegación */}
       <View style={styles.footer}>
-        <Ionicons name="headset-outline" size={24} />
-        <Ionicons name="cloud-outline" size={24} />
-        <Ionicons name="home" size={24} />
-        <Ionicons name="search" size={24} />
-        <Ionicons name="person-circle-outline" size={24} />
+        <BottomNav navigate={navigate} />
       </View>
     </View>
   );
