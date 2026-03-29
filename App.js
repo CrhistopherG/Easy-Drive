@@ -3,6 +3,7 @@ import LoginScreen from './src/screens/LoginScreen';
 import RegisterScreen from './src/screens/RegisterScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import ConfigurationScreen from './src/screens/ConfigurationScreen';
+import CloudScreen from './src/screens/CloudScreen';
 
 
 export default function App() {
