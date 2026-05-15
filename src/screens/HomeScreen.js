@@ -1,37 +1,63 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import { Ionicons, MaterialIcons } from '@expo/vector-icons';
-import BottomNav from '../components/BottomNav';
+import {
+  View,
+  Button,
+  StyleSheet,
+  Text,
+} from 'react-native';
 
-export default function HomeScreen({navigate}) {
+/*
+  IMPORTANTE:
+  En tu App.js envías la prop llamada "navigate":
+
+  <HomeScreen
+    user={user}
+    navigate={setScreen}
+  />
+
+  Por lo tanto, aquí NO debes usar:
+  function HomeScreen({ navigation })
+
+  Debe ser:
+  function HomeScreen({ navigate, user })
+*/
+
+export default function HomeScreen({ navigate, user }) {
   return (
     <View style={styles.container}>
-      
-      {/* Header */}
-      <View style={styles.header}>
-        <Text style={styles.title}>HOME</Text>
-        <TouchableOpacity>
-          <Ionicons name="add-circle-outline" size={28} color="black" />
-        </TouchableOpacity>
-      </View>
+      <Text style={styles.title}>
+        Bienvenido {user?.email || 'Usuario'}
+      </Text>
 
-      {/* Card con información del coche */}
-      <View style={styles.card}>
-        <View style={styles.cardHeader}>
-          <Text style={styles.signal}>📶</Text>
-          <Text style={styles.plate}>F 150 YXE-573-G</Text>
-        </View>
-        <Image
-          source={require('../../assets/car.png')} // tu imagen en assets
-          style={styles.thumbnail}
-        />
-        <Text style={styles.cardFooter}>ID: 3523891647</Text>
-      </View>
+      <Button
+        title="Vehículos"
+        onPress={() => navigate('vehiculos')}
+      />
 
-      {/* Footer navegación */}
-      <View style={styles.footer}>
-        <BottomNav navigate={navigate} />
-      </View>
+
+  
+
+      <View style={styles.spacing} />
+
+      <Button
+        title="Alertas"
+        onPress={() => navigate('alertas')}
+      />
+
+      <View style={styles.spacing} />
+
+      <Button
+        title="Configuración"
+        onPress={() => navigate('configuration')}
+      />
+
+      <View style={styles.spacing} />
+
+      <Button
+        title="Cerrar Sesión"
+        color="red"
+        onPress={() => navigate('login')}
+      />
     </View>
   );
 }
@@ -39,52 +65,16 @@ export default function HomeScreen({navigate}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'space-between',
-    backgroundColor: '#fff',
-  },
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    padding: 10,
+    justifyContent: 'center',
+    padding: 20,
   },
   title: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 30,
   },
-  card: {
-    margin: 20,
-    borderWidth: 1,
-    borderColor: '#ccc',
-    borderRadius: 10,
-    overflow: 'hidden',
-  },
-  cardHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    padding: 8,
-  },
-  signal: {
-    color: 'red',
-    fontSize: 16,
-  },
-  plate: {
-    fontWeight: 'bold',
-  },
-  thumbnail: {
-    width: '100%',
-    height: 150,
-    resizeMode: 'cover',
-  },
-  cardFooter: {
-    padding: 8,
-    fontSize: 14,
-    color: '#555',
-  },
-  footer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    padding: 10,
-    borderTopWidth: 1,
-    borderColor: '#ccc',
+  spacing: {
+    height: 15,
   },
 });

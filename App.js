@@ -5,7 +5,6 @@ import RegisterScreen from './src/screens/RegisterScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import ConfigurationScreen from './src/screens/ConfigurationScreen';
 import VehiculosScreen from './src/screens/VehiculosScreen';
-import SimuladorScreen from './src/screens/SimuladorScreen';
 import AlertasScreen from './src/screens/AlertasScreen';
 
 export default function App() {
