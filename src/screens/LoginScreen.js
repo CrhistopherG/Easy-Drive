@@ -29,6 +29,9 @@ export default function LoginScreen({ goToRegister, goToHome }) {
       />
 
       <Text style={styles.title}>Bienvenido(a) a EasyDrive</Text>
+      <Text style={styles.tagline}>
+        Cuidando de ti en cada trayecto 🚗
+      </Text>
       <Text style={styles.subtitle}>INICIA SESIÓN</Text>
 
       <CustomInput
@@ -75,4 +78,12 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     fontWeight: 'bold',
   },
+  tagline: {
+  textAlign: 'center',
+  fontSize: 16,
+  color: '#666',
+  marginBottom: 10,
+  fontStyle: 'italic',
+  },
+
 });
